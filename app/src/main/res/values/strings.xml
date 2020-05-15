@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MeterToKilometerConverter</string>
+    <string name="kilometers">Километры</string>
+    <string name="meters">Метры</string>
+    <string name="convertToMeters">Конверт в мс</string>
+    <string name="convertToKilometers">Конверт в км/ч</string>
 </resources>

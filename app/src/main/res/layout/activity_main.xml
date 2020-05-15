@@ -6,13 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/kilometersValue"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/metersValue"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="67dp"
+        app:layout_constraintTop_toBottomOf="@+id/kilometersValue"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <TextView
+        android:id="@+id/kilometersLabel"
+        android:layout_width="56dp"
+        android:layout_height="17dp"
+        android:text="@string/kilometers"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/metersLabel"
+        android:layout_width="78dp"
+        android:layout_height="17dp"
+        android:text="@string/meters"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="99dp"
+        app:layout_constraintTop_toBottomOf="@+id/kilometersLabel" />
+
+    <Button
+        android:id="@+id/toMetersButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="11dp"
+        android:onClick="onToKilometersClick"
+        android:text="@string/convertToMeters"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/kilometersValue" />
+
+    <Button
+        android:id="@+id/toKilometersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:onClick="onToMetersClick"
+        android:text="@string/convertToKilometers"
+        app:layout_constraintStart_toEndOf="@+id/toMetersButton"
+        app:layout_constraintTop_toBottomOf="@+id/kilometersValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
